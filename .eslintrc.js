@@ -1,7 +1,7 @@
 const prettierConfig = require('./.prettierrc.js');
 
 module.exports = {
-  "extends": ["prettier", "eslint:recommended", "google"],
+  "extends": ["prettier", "eslint:recommended"],
   "parser": "babel-eslint",
   "env": {
     "es6": true,
@@ -10,6 +10,6 @@ module.exports = {
   },
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": ["error", prettierConfig]
+    "prettier/prettier": ["warn", prettierConfig]
   }
 }
