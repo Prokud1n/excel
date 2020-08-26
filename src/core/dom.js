@@ -40,6 +40,18 @@ class Dom {
 
         return this;
     }
+
+    getCoords() {
+        return this.$el.getBoundingClientRect();
+    }
+
+    css(styles = {}) {
+        Object.keys(styles).forEach((prop) => {
+            this.$el.style[prop] = styles[prop];
+        });
+
+        return this;
+    }
 }
 
 export function $(selector) {
